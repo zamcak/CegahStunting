@@ -1,0 +1,1150 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>Cegah Stunting</title>
+    <!-- Tailwind CSS v3 + Font Awesome Icons + Google Fonts (Inter) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- AOS (Animate on Scroll) CSS & JS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- Font Awesome 6 (free) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- Custom Tailwind config override for extra smoothness -->
+    <style>
+        * {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+        }
+
+        /* custom scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #f1f1f1;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: #2b9348;
+            border-radius: 20px;
+        }
+
+        /* additional smooth hover transitions */
+        .card-hover {
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .card-hover:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 20px 25px -12px rgba(0, 0, 0, 0.15);
+        }
+
+        .btn-glow:hover {
+            box-shadow: 0 0 12px rgba(43, 147, 72, 0.6);
+        }
+
+        .abcde-card {
+            transition: all 0.3s ease;
+        }
+
+        .abcde-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 25px 35px -12px rgba(0, 0, 0, 0.2);
+        }
+
+        .gradient-border {
+            background: linear-gradient(135deg, #2b9348, #38b000, #f4a261);
+        }
+
+        .timeline-badge {
+            transition: all 0.2s ease;
+        }
+
+        .bg-pattern {
+            background-image: radial-gradient(circle at 10% 20%, rgba(46, 204, 113, 0.03) 0%, transparent 50%);
+        }
+    </style>
+</head>
+
+<body class="bg-gradient-to-br from-emerald-50 via-white to-teal-50 text-gray-800">
+
+    <!-- ==================== NAVBAR (Sticky + Modern) ==================== -->
+    <header class="sticky top-0 z-50 bg-white/80 backdrop-blur-md shadow-sm border-b border-emerald-100">
+        <div class="container mx-auto px-6 py-4 flex flex-wrap justify-between items-center">
+            <div class="flex items-center space-x-2" data-aos="fade-down" data-aos-duration="800">
+                <i class="fas fa-seedling text-3xl text-emerald-600"></i>
+                <span
+                    class="font-bold text-2xl tracking-tight bg-gradient-to-r from-emerald-700 to-teal-600 bg-clip-text text-transparent">Cegah<span
+                        class="text-emerald-500">Stunting</span></span>
+            </div>
+            <nav class="hidden md:flex space-x-8 font-medium text-gray-700" data-aos="fade-down"
+                data-aos-duration="800">
+                <a href="#beranda" class="hover:text-emerald-600 transition duration-300">Beranda</a>
+                <a href="#tentang" class="hover:text-emerald-600 transition duration-300">Apa Itu Stunting?</a>
+                <a href="#penyebab" class="hover:text-emerald-600 transition duration-300">Penyebab</a>
+                <a href="#ciriciri" class="hover:text-emerald-600 transition duration-300">Ciri-Ciri</a>
+                <a href="#dampak" class="hover:text-emerald-600 transition duration-300">Dampak</a>
+                <a href="#pencegahan" class="hover:text-emerald-600 transition duration-300">Pencegahan</a>
+            </nav>
+            <div class="md:hidden" data-aos="fade-down">
+                <button id="mobileMenuBtn" class="text-emerald-700 text-2xl focus:outline-none">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+        <!-- Mobile Menu (hidden by default) -->
+        <div id="mobileMenu"
+            class="md:hidden hidden bg-white/95 backdrop-blur-md border-t border-emerald-100 px-6 py-4 flex flex-col space-y-3 text-gray-700 font-medium">
+            <a href="#beranda" class="hover:text-emerald-600 py-2 transition">Beranda</a>
+            <a href="#tentang" class="hover:text-emerald-600 py-2 transition">Apa Itu Stunting?</a>
+            <a href="#penyebab" class="hover:text-emerald-600 py-2 transition">Penyebab</a>
+            <a href="#ciriciri" class="hover:text-emerald-600 py-2 transition">Ciri-Ciri</a>
+            <a href="#dampak" class="hover:text-emerald-600 py-2 transition">Dampak</a>
+            <a href="#pencegahan" class="hover:text-emerald-600 py-2 transition">Pencegahan</a>
+        </div>
+    </header>
+
+    <main>
+        <!-- ==================== HERO SECTION (Beranda) ==================== -->
+        <section id="beranda" class="relative overflow-hidden pt-12 pb-20 md:pt-20 md:pb-28">
+            <div class="absolute top-0 right-0 w-96 h-96 bg-emerald-200/30 rounded-full blur-3xl -z-10"></div>
+            <div class="absolute bottom-0 left-0 w-80 h-80 bg-teal-200/30 rounded-full blur-3xl -z-10"></div>
+            <div class="container mx-auto px-6 flex flex-col lg:flex-row items-center gap-12">
+                <div class="flex-1 text-center lg:text-left" data-aos="fade-up" data-aos-duration="1000">
+                    <div
+                        class="inline-block bg-emerald-100 text-emerald-700 px-4 py-1.5 rounded-full text-sm font-semibold mb-5">
+                        <i class="fas fa-child mr-1"></i> Masa Depan Cerah
+                    </div>
+                    <h1
+                        class="text-4xl md:text-5xl lg:text-6xl font-extrabold leading-tight tracking-tight text-gray-800">
+                        Cegah Stunting, <br>
+                        <span
+                            class="bg-gradient-to-r from-emerald-600 to-teal-500 bg-clip-text text-transparent text-2xl md:text-3xl lg:text-4xl">Wujudkan
+                            GenerasI Unggul dengan ABCDE</span>
+                    </h1>
+
+                    <div class="mt-8 flex flex-wrap gap-4 justify-center lg:justify-start">
+                        <a href="#tentang"
+                            class="bg-emerald-600 hover:bg-emerald-700 text-white px-7 py-3 rounded-full font-semibold shadow-lg transition-all duration-300 btn-glow flex items-center gap-2"><i
+                                class="fas fa-info-circle"></i> Pelajari Selengkapnya</a>
+                        <a href="#pencegahan"
+                            class="border-2 border-emerald-600 text-emerald-700 hover:bg-emerald-50 px-7 py-3 rounded-full font-semibold transition-all duration-300 flex items-center gap-2"><i
+                                class="fas fa-hands-helping"></i> Pencegahan</a>
+                    </div>
+                </div>
+                <div class="flex-1 flex justify-center" data-aos="fade-down" data-aos-duration="1000"
+                    data-aos-delay="200">
+                    <div class="relative">
+                        <div
+                            class="w-72 h-72 md:w-96 md:h-96 bg-gradient-to-tr from-emerald-300 to-teal-300 rounded-full opacity-20 absolute -z-10 blur-2xl">
+                        </div>
+                        <img src="https://dinkes.bandaacehkota.go.id/wp-content/uploads/sites/36/2025/07/seri-percepatan-penurunan-stunting-1.png"
+                            alt="Ilustrasi anak sehat" class="w-full max-w-md drop-shadow-xl">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==================== TENTANG STUNTING ==================== -->
+        <section id="tentang" class="py-16 bg-white/60 rounded-t-3xl">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-12" data-aos="zoom-in" data-aos-duration="800">
+                    <span class="text-emerald-600 font-semibold tracking-wide uppercase text-sm"><i
+                            class="fas fa-question-circle mr-1"></i> Pemahaman Dasar</span>
+                    <h2 class="text-3xl md:text-4xl font-bold mt-2 text-gray-800">Apa itu Stunting?</h2>
+                    <div class="w-24 h-1 bg-emerald-500 mx-auto mt-4 rounded-full"></div>
+                </div>
+                <div class="grid md:grid-cols-2 gap-12 items-center">
+                    <div data-aos="fade-down" data-aos-duration="900">
+                        <div class="bg-emerald-50 p-6 rounded-2xl shadow-sm border border-emerald-100">
+                            <p class="text-gray-700 leading-relaxed" id="sound1">
+                                Stunting adalah kondisi ketika tinggi badan anak lebih rendah dari standar tinggi badan
+                                anak seusianya berdasarkan nilai z-score tinggi badan menurut umur yang berada di bawah
+                                <-2 standar deviasi. Stunting merupakan dampak dari kekurangan gizi kronis terutama pada
+                                    masa 1.000 hari pertama kehidupan, yang dapat menyebabkan gangguan pertumbuhan dan
+                                    perkembangan anak secara permanen. <div
+                                    class="mt-6 flex items-center gap-2 text-emerald-700 font-medium">
+                                    <button onclick="playSound('sound1')"
+                                        class="bg-emerald-600 hover:bg-emerald-700 text-white px-4 py-2 rounded-full flex items-center gap-2">
+                                        <i class="fas fa-volume-up"></i></button>
+                        </div>
+                    </div>
+                </div>
+              <div class="grid grid-cols-2 gap-6" data-aos="fade-up" data-aos-duration="900">
+    <!-- Card 1 - Modern Statistik -->
+    <div class="group relative bg-gradient-to-br from-white to-amber-50/30 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 overflow-hidden border border-amber-100 card-hover">
+        <!-- Background decorative -->
+        <div class="absolute -top-10 -right-10 w-32 h-32 bg-amber-100 rounded-full opacity-40 group-hover:scale-150 transition-transform duration-700"></div>
+        <div class="relative p-6 text-center">
+            <div class="w-14 h-14 bg-gradient-to-br from-amber-400 to-orange-500 rounded-2xl flex items-center justify-center mx-auto mb-4 shadow-lg transform group-hover:scale-110 transition-transform duration-300">
+                <i class="fas fa-chart-line text-white text-2xl"></i>
+            </div>
+            <p class="text-4xl font-black bg-gradient-to-r from-amber-600 to-orange-600 bg-clip-text text-transparent">21,6%</p>
+            <p class="text-sm font-semibold text-gray-700 mt-2">Prevalensi Stunting</p>
+            <p class="text-xs text-gray-400">Indonesia • 2025</p>
+            <div class="mt-3 flex items-center justify-center gap-1">
+                <i class="fas fa-arrow-down text-emerald-500 text-xs"></i>
+                <span class="text-xs text-emerald-600 font-medium">Menurun 2,5% dari 2024</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Card 2 - Modern Periode Emas -->
+    <div class="group relative bg-gradient-to-br from-white to-emerald-50/30 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 overflow-hidden border border-emerald-100 card-hover">
+        <!-- Background decorative -->
+        <div class="absolute -bottom-10 -left-10 w-32 h-32 bg-emerald-100 rounded-full opacity-40 group-hover:scale-150 transition-transform duration-700"></div>
+        <div class="relative p-6 text-center">
+            <div class="w-14 h-14 bg-gradient-to-br from-emerald-400 to-teal-500 rounded-2xl flex items-center justify-center mx-auto mb-4 shadow-lg transform group-hover:scale-110 transition-transform duration-300">
+                <i class="fas fa-crown text-white text-2xl"></i>
+            </div>
+            <p class="text-4xl font-black bg-gradient-to-r from-emerald-600 to-teal-600 bg-clip-text text-transparent">1000 HPK</p>
+            <p class="text-sm font-semibold text-gray-700 mt-2">Periode Emas</p>
+            <p class="text-xs text-gray-400">Hari Pertama Kehidupan</p>
+            <div class="mt-3 flex items-center justify-center gap-1">
+                <i class="fas fa-star text-amber-400 text-xs"></i>
+                <span class="text-xs text-emerald-600 font-medium">Masa krusial cegah stunting</span>
+            </div>
+        </div>
+    </div>
+</div>
+            </div>
+            </div>
+        </section>
+
+        <!-- ==================== PENYEBAB STUNTING ==================== -->
+        <section id="penyebab" class="py-20 bg-gradient-to-b from-white to-emerald-50/40">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-14" data-aos="fade-up">
+                    <span class="text-emerald-600 font-semibold tracking-wide"><i
+                            class="fas fa-exclamation-triangle mr-1"></i> Faktor Risiko</span>
+                    <h2 class="text-3xl md:text-4xl font-bold mt-2">FAKTOR PENYEBAB STUNTING</h2>
+                    <p class="text-gray-600 max-w-2xl mx-auto mt-3">Multifaktorial, dimulai dari masa kehamilan hingga
+                        balita.</p>
+                </div>
+                <div class="grid md:grid-cols-1 gap-8">
+                    <div class="bg-white rounded-2xl p-6 shadow-md border-l-8 border-l-amber-400 card-hover"
+                        data-aos="flip-left" data-aos-duration="700">
+                        <h3 class="text-xl font-bold mb-2">1.Kekurangan Asupan Energi dan Protein</h3>
+                        <p class="text-gray-600" id="faktor1">Kekurangan asupan energi dan protein merupakan salah satu
+                            faktor utama
+                            yang menyebabkan stunting. Ibu hamil yang tidak memperoleh asupan gizi yang cukup serta
+                            mengalami penyakit infeksi berisiko melahirkan bayi dengan berat badan lahir rendah (BBLR)
+                            atau panjang badan di bawah standar, karena pertumbuhan janin di dalam kandungan tidak
+                            berlangsung optimal. Kondisi ini dapat berlanjut setelah kelahiran apabila anak tidak
+                            mendapatkan asupan makanan yang cukup baik dari segi jumlah maupun kualitas dalam jangka
+                            waktu yang lama, sehingga menghambat proses pertumbuhan.</p>
+                        <button onclick="playSound('faktor1')"
+                            class="mt-6 bg-emerald-600 hover:bg-emerald-700 text-white px-4 py-2 rounded-full flex items-center gap-2">
+                            <i class="fas fa-volume-up"></i></button>
+                    </div>
+                    <div class="bg-white rounded-2xl p-6 shadow-md border-l-8 border-l-emerald-400 card-hover"
+                        data-aos="flip-left" data-aos-duration="700" data-aos-delay="100">
+
+                        <h3 class="text-xl font-bold mb-2">2.Penyakit Infeksi</h3>
+                        <p class="text-gray-600" id="faktor2">Penyakit infeksi seperti diare dan infeksi saluran
+                            pernapasan dapat
+                            memperburuk kondisi gizi anak. Ketika anak sering sakit, nafsu makan biasanya menurun
+                            sehingga asupan makanan menjadi kurang. Selain itu, infeksi juga dapat mengganggu penyerapan
+                            zat gizi di dalam tubuh.</p>
+                        <button onclick="playSound('faktor2')"
+                            class="mt-6 bg-emerald-600 hover:bg-emerald-700 text-white px-4 py-2 rounded-full flex items-center gap-2">
+                            <i class="fas fa-volume-up"></i></button>
+                    </div>
+                    <div class="bg-white rounded-2xl p-6 shadow-md border-l-8 border-l-teal-400 card-hover"
+                        data-aos="flip-left" data-aos-duration="700" data-aos-delay="200">
+                        <h3 class="text-xl font-bold mb-2">3.Pola Asuh</h3>
+                        <p class="text-gray-600" id="faktor3">Pola asuh yang kurang tepat, terutama dalam pemberian
+                            makan, sangat
+                            berpengaruh terhadap kejadian stunting. Anak yang tidak mendapatkan ASI secara optimal,
+                            tidak diberikan makanan pendamping sesuai usia, atau tidak memperoleh variasi makanan yang
+                            cukup akan berisiko mengalami kekurangan gizi.</p>
+                        <button onclick="playSound('faktor3')"
+                            class="mt-6 bg-emerald-600 hover:bg-emerald-700 text-white px-4 py-2 rounded-full flex items-center gap-2">
+                            <i class="fas fa-volume-up"></i></button>
+                    </div>
+
+                    <div class="bg-white rounded-2xl p-6 shadow-md border-l-8 border-l-amber-400 card-hover"
+                        data-aos="flip-left" data-aos-duration="700">
+                        <h3 class="text-xl font-bold mb-2">4.Sanitasi Lingkungan dan Pelayanan Kesehatan </h3>
+                        <p class="text-gray-600" id="faktor4">Lingkungan yang kurang bersih dapat meningkatkan risiko
+                            penyakit
+                            infeksi pada anak. Sanitasi yang buruk, seperti tidak tersedianya air bersih dan fasilitas
+                            jamban yang layak, dapat menyebabkan gangguan kesehatan yang berdampak pada penurunan status
+                            gizi. Selain itu, kurangnya pemanfaatan pelayanan kesehatan seperti pemeriksaan rutin dan
+                            pemantauan pertumbuhan anak juga dapat menyebabkan masalah gizi tidak terdeteksi sejak dini.
+                        </p>
+                        <button onclick="playSound('faktor4')"
+                            class="mt-6 bg-emerald-600 hover:bg-emerald-700 text-white px-4 py-2 rounded-full flex items-center gap-2">
+                            <i class="fas fa-volume-up"></i></button>
+                    </div>
+                    <div class="bg-white rounded-2xl p-6 shadow-md border-l-8 border-l-emerald-400 card-hover"
+                        data-aos="flip-left" data-aos-duration="700" data-aos-delay="100">
+
+                        <h3 class="text-xl font-bold mb-2">5.Faktor Ekonomi </h3>
+                        <p class="text-gray-600" id="faktor5">Kondisi ekonomi keluarga berhubungan erat dengan kemampuan
+                            memenuhi
+                            kebutuhan gizi anak. Keluarga dengan pendapatan rendah cenderung memiliki keterbatasan dalam
+                            menyediakan makanan bergizi dan mengakses pelayanan kesehatan.</p>
+                        <button onclick="playSound('faktor5')"
+                            class="mt-6 bg-emerald-600 hover:bg-emerald-700 text-white px-4 py-2 rounded-full flex items-center gap-2">
+                            <i class="fas fa-volume-up"></i></button>
+                    </div>
+                    <div class="bg-white rounded-2xl p-6 shadow-md border-l-8 border-l-teal-400 card-hover"
+                        data-aos="flip-left" data-aos-duration="700" data-aos-delay="200">
+                        <h3 class="text-xl font-bold mb-2">6.Faktor Pendidikan </h3>
+                        <p class="text-gray-600" id="faktor6">Tingkat pendidikan orang tua, terutama ibu, mempengaruhi
+                            pemahaman
+                            tentang gizi dan kesehatan anak. Ibu dengan tingkat pendidikan yang lebih rendah seringkali
+                            memiliki keterbatasan dalam menerima dan memahami informasi tentang pola makan yang benar
+                            dan cara pencegahan stunting.</p>
+                        <button onclick="playSound('faktor6')"
+                            class="mt-6 bg-emerald-600 hover:bg-emerald-700 text-white px-4 py-2 rounded-full flex items-center gap-2">
+                            <i class="fas fa-volume-up"></i></button>
+                    </div>
+                    <div class="bg-white rounded-2xl p-6 shadow-md border-l-8 border-l-amber-400 card-hover"
+                        data-aos="flip-left" data-aos-duration="700">
+                        <h3 class="text-xl font-bold mb-2">7.Faktor Lingkungan</h3>
+                        <p class="text-gray-600" id="faktor7">Lingkungan tempat tinggal, baik lingkungan rumah maupun
+                            lingkungan
+                            sosial, juga berpengaruh terhadap kebiasaan makan dan kesehatan anak.</p>
+                        <button onclick="playSound('faktor7')"
+                            class="mt-6 bg-emerald-600 hover:bg-emerald-700 text-white px-4 py-2 rounded-full flex items-center gap-2">
+                            <i class="fas fa-volume-up"></i></button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+
+        <!-- ==================== SECTION CIRI-CIRI STUNTING ==================== -->
+        <section class="py-20 px-4 md:px-8 overflow-hidden" id="ciriciri">
+            <div class="container mx-auto max-w-7xl">
+
+                <!-- Header Section dengan gambar dekoratif unik -->
+                <div class="text-center mb-16" data-aos="fade-down" data-aos-duration="800">
+                    <div
+                        class="inline-flex items-center gap-3 bg-emerald-100/80 backdrop-blur-sm px-6 py-2 rounded-full shadow-sm mb-4">
+                        <i class="fas fa-child text-emerald-600 text-xl"></i>
+                        <span class="text-emerald-700 font-semibold tracking-wide text-sm uppercase">Waspada &
+                            Kenali</span>
+                    </div>
+                    <h2
+                        class="text-4xl md:text-5xl lg:text-6xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-emerald-700 to-teal-600 mb-4">
+                        Ciri-Ciri Stunting
+                    </h2>
+                    <div class="w-28 h-1.5 bg-gradient-to-r from-emerald-400 to-teal-500 mx-auto rounded-full mb-6">
+                    </div>
+                    <p class="text-gray-600 max-w-2xl mx-auto text-lg">
+                        Deteksi dulu, cegah sedini mungkin. Kenali 7 tanda utama stunting pada anak agar intervensi
+                        cepat dilakukan.
+                    </p>
+
+                </div>
+
+                <!-- Grid Cards - 7 Ciri Stunting dengan gambar unik setiap card -->
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+                    <!-- Card 1 -->
+                    <div class="bg-white rounded-2xl shadow-lg overflow-hidden border border-emerald-100 card-hover"
+                        data-aos="fade-up" data-aos-duration="600">
+                        <div
+                            class="relative h-48 bg-gradient-to-br from-sky-400 to-blue-500 flex items-center justify-center">
+                            <i class="fas fa-ruler-combined text-white text-6xl drop-shadow-lg"></i>
+                            <div
+                                class="absolute bottom-0 left-0 right-0 h-16 bg-gradient-to-t from-black/30 to-transparent">
+                            </div>
+                            <span
+                                class="absolute top-3 right-3 bg-white/30 backdrop-blur-md text-white text-sm font-bold px-3 py-1 rounded-full">
+                                1</span>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold text-gray-800 mb-2 flex items-center gap-2">
+                                <i class="fas fa-arrow-down text-emerald-500"></i>
+                                Tinggi Badan Lebih Pendek
+                            </h3>
+                            <p class="text-gray-600 leading-relaxed" id="ciri1">
+                                Tinggi badan lebih pendek dari anak seusianya. Kondisi ini terjadi karena pertumbuhan
+                                tinggi badan terhambat akibat kekurangan gizi dalam waktu yang lama.
+                            </p>
+                            <button onclick="playSound('ciri1')"
+                                class="mt-6 bg-emerald-600 hover:bg-emerald-700 text-white px-4 py-2 rounded-full flex items-center gap-2">
+                                <i class="fas fa-volume-up"></i></button>
+                        </div>
+                    </div>
+
+                    <!-- Card 2 -->
+                    <div class="bg-white rounded-2xl shadow-lg overflow-hidden border border-emerald-100 card-hover"
+                        data-aos="fade-up" data-aos-duration="600" data-aos-delay="100">
+                        <div
+                            class="relative h-48 bg-gradient-to-br from-amber-400 to-orange-500 flex items-center justify-center">
+                            <i class="fas fa-weight-scale text-white text-6xl drop-shadow-lg"></i>
+                            <span
+                                class="absolute top-3 right-3 bg-white/30 backdrop-blur-md text-white text-sm font-bold px-3 py-1 rounded-full">
+                                2</span>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold text-gray-800 mb-2 flex items-center gap-2">
+                                <i class="fas fa-chart-line text-amber-500"></i>
+                                Berat Badan Lebih Rendah
+                            </h3>
+                            <p class="text-gray-600 leading-relaxed" id="ciri2">
+                                Berat badan cenderung lebih rendah, anak stunting umumnya tidak hanya pendek, tetapi
+                                juga memiliki berat badan di bawah standar anak seusianya.
+                            </p>
+                            <button onclick="playSound('ciri2')"
+                                class="mt-6 bg-emerald-600 hover:bg-emerald-700 text-white px-4 py-2 rounded-full flex items-center gap-2">
+                                <i class="fas fa-volume-up"></i></button>
+                        </div>
+                    </div>
+
+                    <!-- Card 3 -->
+                    <div class="bg-white rounded-2xl shadow-lg overflow-hidden border border-emerald-100 card-hover"
+                        data-aos="fade-up" data-aos-duration="600" data-aos-delay="200">
+                        <div
+                            class="relative h-48 bg-gradient-to-br from-emerald-400 to-green-600 flex items-center justify-center">
+                            <i class="fas fa-person-walking text-white text-6xl drop-shadow-lg"></i>
+                            <span
+                                class="absolute top-3 right-3 bg-white/30 backdrop-blur-md text-white text-sm font-bold px-3 py-1 rounded-full">
+                                3</span>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold text-gray-800 mb-2 flex items-center gap-2">
+                                <i class="fas fa-muscle text-emerald-500"></i>
+                                Perkembangan Fisik Terhambat
+                            </h3>
+                            <p class="text-gray-600 leading-relaxed" id="ciri3">
+                                Perkembangan fisik terhambat, seperti pertumbuhan otot dan bentuk tubuh yang tidak
+                                berkembang optimal dibandingkan anak lain.
+                            </p>
+                            <button onclick="playSound('ciri3')"
+                                class="mt-6 bg-emerald-600 hover:bg-emerald-700 text-white px-4 py-2 rounded-full flex items-center gap-2">
+                                <i class="fas fa-volume-up"></i></button>
+                        </div>
+                    </div>
+
+                    <!-- Card 4 -->
+                    <div class="bg-white rounded-2xl shadow-lg overflow-hidden border border-emerald-100 card-hover"
+                        data-aos="fade-up" data-aos-duration="600" data-aos-delay="300">
+                        <div
+                            class="relative h-48 bg-gradient-to-br from-purple-400 to-pink-500 flex items-center justify-center">
+                            <i class="fas fa-brain text-white text-6xl drop-shadow-lg"></i>
+                            <span
+                                class="absolute top-3 right-3 bg-white/30 backdrop-blur-md text-white text-sm font-bold px-3 py-1 rounded-full">
+                                4</span>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold text-gray-800 mb-2 flex items-center gap-2">
+                                <i class="fas fa-head-side-vr text-purple-500"></i>
+                                Gangguan Kognitif
+                            </h3>
+                            <p class="text-gray-600 leading-relaxed" id="ciri4">
+                                Mengalami gangguan kognitif, yaitu adanya hambatan dalam kemampuan berpikir, belajar,
+                                mengingat, serta berkomunikasi, sehingga memengaruhi proses belajar anak.
+                            </p>
+                            <button onclick="playSound('ciri4')"
+                                class="mt-6 bg-emerald-600 hover:bg-emerald-700 text-white px-4 py-2 rounded-full flex items-center gap-2">
+                                <i class="fas fa-volume-up"></i></button>
+                        </div>
+                    </div>
+
+                    <!-- Card 5 -->
+                    <div class="bg-white rounded-2xl shadow-lg overflow-hidden border border-emerald-100 card-hover"
+                        data-aos="fade-up" data-aos-duration="600" data-aos-delay="400">
+                        <div
+                            class="relative h-48 bg-gradient-to-br from-rose-400 to-red-500 flex items-center justify-center">
+                            <i class="fas fa-battery-quarter text-white text-6xl drop-shadow-lg"></i>
+                            <span
+                                class="absolute top-3 right-3 bg-white/30 backdrop-blur-md text-white text-sm font-bold px-3 py-1 rounded-full">
+                                5</span>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold text-gray-800 mb-2 flex items-center gap-2">
+                                <i class="fas fa-bolt text-rose-500"></i>
+                                Energi & Aktivitas Rendah
+                            </h3>
+                            <p class="text-gray-600 leading-relaxed" id="ciri5">
+                                Energi dan aktivitas cenderung rendah, anak terlihat kurang aktif dan mudah lelah, yang
+                                dapat berdampak pada aktivitas sehari-hari dan perkembangan jangka panjang.
+                            </p>
+                            <button onclick="playSound('ciri5')"
+                                class="mt-6 bg-emerald-600 hover:bg-emerald-700 text-white px-4 py-2 rounded-full flex items-center gap-2">
+                                <i class="fas fa-volume-up"></i></button>
+                        </div>
+                    </div>
+
+                    <!-- Card 6 -->
+                    <div class="bg-white rounded-2xl shadow-lg overflow-hidden border border-emerald-100 card-hover"
+                        data-aos="fade-up" data-aos-duration="600" data-aos-delay="500">
+                        <div
+                            class="relative h-48 bg-gradient-to-br from-indigo-400 to-blue-600 flex items-center justify-center">
+                            <i class="fas fa-calendar-alt text-white text-6xl drop-shadow-lg"></i>
+                            <span
+                                class="absolute top-3 right-3 bg-white/30 backdrop-blur-md text-white text-sm font-bold px-3 py-1 rounded-full">
+                                6</span>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold text-gray-800 mb-2 flex items-center gap-2">
+                                <i class="fas fa-clock text-indigo-500"></i>
+                                Pubertas Lebih Lambat
+                            </h3>
+                            <p class="text-gray-600 leading-relaxed" id="ciri6">
+                                Pubertas terjadi lebih lambat, anak dengan stunting berpotensi mengalami keterlambatan
+                                dalam perkembangan menuju masa remaja dibandingkan teman seusianya.
+                            </p>
+                            <button onclick="playSound('ciri6')"
+                                class="mt-6 bg-emerald-600 hover:bg-emerald-700 text-white px-4 py-2 rounded-full flex items-center gap-2">
+                                <i class="fas fa-volume-up"></i></button>
+                        </div>
+                    </div>
+
+                    <!-- Card 7 - Full width on grid span (biar unik) -->
+                    <div class="lg:col-span-3 md:col-span-2 bg-gradient-to-r from-emerald-50 via-teal-50 to-cyan-50 rounded-2xl shadow-lg overflow-hidden border border-emerald-200 card-hover"
+                        data-aos="fade-up" data-aos-duration="600" data-aos-delay="600">
+                        <div class="flex flex-col md:flex-row">
+                            <div
+                                class="md:w-1/3 bg-gradient-to-br from-teal-500 to-emerald-600 flex items-center justify-center p-8">
+                                <div class="text-center">
+                                    <i class="fas fa-baby-carriage text-white text-7xl mb-3"></i>
+                                    <span
+                                        class="bg-white/20 backdrop-blur-sm text-white text-sm font-bold px-3 py-1 rounded-full inline-block">
+                                        7</span>
+                                </div>
+                            </div>
+                            <div class="md:w-2/3 p-6 md:p-8">
+                                <h3 class="text-2xl font-bold text-gray-800 mb-3 flex items-center gap-2">
+                                    <i class="fas fa-face-smile text-teal-500"></i>
+                                    Penampilan Lebih Muda dari Usia
+                                </h3>
+                                <p class="text-gray-700 leading-relaxed text-base" id="ciri7">
+                                    Penampilan tampak lebih muda dari usia sebenarnya, karena pertumbuhan fisik yang
+                                    tidak optimal membuat anak terlihat lebih kecil atau lebih muda dari anak seusianya.
+                                    Hal ini sering menjadi tanda paling jelas yang dapat dilihat oleh orang tua dan
+                                    guru.
+                                </p>
+                                <button onclick="playSound('ciri7')"
+                                    class="mt-6 bg-emerald-600 hover:bg-emerald-700 text-white px-4 py-2 rounded-full flex items-center gap-2">
+                                    <i class="fas fa-volume-up"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+              
+            </div>
+        </section>
+
+
+
+        <!-- ==================== SECTION DAMPAK STUNTING ==================== -->
+        <section class="py-20 px-4 md:px-8 overflow-hidden" id="dampak">
+            <div class="container mx-auto max-w-7xl">
+
+                <!-- Header Section -->
+                <div class="text-center mb-16" data-aos="fade-down" data-aos-duration="800">
+                    <div
+                        class="inline-flex items-center gap-3 bg-rose-100/80 backdrop-blur-sm px-6 py-2 rounded-full shadow-sm mb-4">
+                        <i class="fas fa-exclamation-triangle text-rose-600 text-xl"></i>
+                        <span class="text-rose-700 font-semibold tracking-wide text-sm uppercase">Serius &
+                            Berbahaya</span>
+                    </div>
+                    <h2
+                        class="text-4xl md:text-5xl lg:text-6xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-rose-700 to-orange-600 mb-4">
+                        Dampak Stunting
+                    </h2>
+                    <div class="w-28 h-1.5 bg-gradient-to-r from-rose-400 to-orange-500 mx-auto rounded-full mb-6">
+                    </div>
+                    <p class="text-gray-600 max-w-2xl mx-auto text-lg">
+                        Stunting bukan hanya masalah tinggi badan. Dampaknya menghantui anak seumur hidup, dari fisik
+                        hingga ekonomi.
+                    </p>
+                </div>
+
+                <!-- Timeline / Dua Kolom Besar: Jangka Pendek vs Jangka Panjang -->
+                <div class="grid lg:grid-cols-2 gap-8 mb-12">
+
+                    <!-- KOLOM KIRI: DAMPAK JANGKA PENDEK -->
+                    <div data-aos="fade-right" data-aos-duration="800">
+                        <div
+                            class="bg-gradient-to-br from-red-50 to-orange-50 rounded-2xl shadow-xl overflow-hidden border-l-8 border-l-red-500 h-full">
+                            <div class="bg-red-600 px-6 py-4">
+                                <div class="flex items-center justify-between gap-3">
+                                    <div class="flex items-center gap-3">
+                                        <i class="fas fa-hourglass-half text-white text-2xl"></i>
+                                        <h3 class="text-2xl font-bold text-white">Dampak Jangka Pendek</h3>
+                                    </div>
+                                    <button onclick="playSound('dampaksound')"
+                                        class="bg-emerald-600 hover:bg-emerald-700 text-white px-3 py-2 rounded-full transition-all duration-300 shadow-md hover:shadow-lg flex items-center gap-2">
+                                        <i class="fas fa-volume-up text-sm"></i>
+                                        <span class="text-xs font-semibold">Suara</span>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="p-6 space-y-5" id="dampaksound">
+                                <!-- Point A -->
+                                <div class="flex gap-4 items-start bg-white/60 rounded-xl p-4 card-hover">
+                                    <div
+                                        class="flex-shrink-0 w-10 h-10 bg-red-100 rounded-full flex items-center justify-center">
+                                        <i class="fas fa-brain text-red-600 text-lg"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-bold text-gray-800 text-lg">a. Terganggunya Perkembangan Otak &
+                                            Kecerdasan</h4>
+                                        <p class="text-gray-600 text-sm leading-relaxed mt-1">Anak yang mengalami
+                                            stunting memiliki perkembangan sel otak yang tidak optimal. Hal ini
+                                            menyebabkan kemampuan berpikir, daya tangkap, dan kecerdasan anak menjadi
+                                            lebih rendah dibandingkan anak dengan pertumbuhan normal.</p>
+                                    </div>
+                                </div>
+                                <!-- Point B -->
+                                <div class="flex gap-4 items-start bg-white/60 rounded-xl p-4 card-hover">
+                                    <div
+                                        class="flex-shrink-0 w-10 h-10 bg-red-100 rounded-full flex items-center justify-center">
+                                        <i class="fas fa-child text-red-600 text-lg"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-bold text-gray-800 text-lg">b. Gangguan Pertumbuhan Fisik</h4>
+                                        <p class="text-gray-600 text-sm leading-relaxed mt-1">Stunting menyebabkan
+                                            pertumbuhan tinggi badan anak terhambat sehingga anak tampak lebih pendek
+                                            dari teman seusianya. Kondisi ini merupakan akibat kekurangan gizi dalam
+                                            waktu yang lama.</p>
+                                    </div>
+                                </div>
+                                <!-- Point C -->
+                                <div class="flex gap-4 items-start bg-white/60 rounded-xl p-4 card-hover">
+                                    <div
+                                        class="flex-shrink-0 w-10 h-10 bg-red-100 rounded-full flex items-center justify-center">
+                                        <i class="fas fa-dumbbell text-red-600 text-lg"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-bold text-gray-800 text-lg">c. Terganggunya Metabolisme Tubuh
+                                        </h4>
+                                        <p class="text-gray-600 text-sm leading-relaxed mt-1">Anak stunting mengalami
+                                            gangguan dalam proses pengolahan zat gizi di dalam tubuh, sehingga fungsi
+                                            tubuh tidak bekerja secara optimal dan meningkatkan risiko gangguan
+                                            kesehatan.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Ilustrasi kecil -->
+                            <div class="bg-red-50/50 p-4 text-center border-t border-red-200">
+                                <i class="fas fa-clock text-red-400 mr-1"></i>
+                                <span class="text-xs text-gray-500">Terjadi dalam 1000 Hari Pertama Kehidupan
+                                    (HPK)</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- KOLOM KANAN: DAMPAK JANGKA PANJANG -->
+                    <div data-aos="fade-left" data-aos-duration="800" data-aos-delay="100">
+                        <div
+                            class="bg-gradient-to-br from-amber-50 to-yellow-50 rounded-2xl shadow-xl overflow-hidden border-l-8 border-l-amber-600 h-full">
+                            <div class="bg-amber-600 px-6 py-4">
+                                <div class="flex items-center justify-between gap-3">
+                                    <div class="flex items-center gap-3">
+                                        <i class="fas fa-chart-line text-white text-2xl"></i>
+                                        <h3 class="text-2xl font-bold text-white">Dampak Jangka Panjang</h3>
+                                    </div>
+                                    <button onclick="playSound('dampaksound2')"
+                                        class="bg-emerald-600 hover:bg-emerald-700 text-white px-3 py-2 rounded-full transition-all duration-300 shadow-md hover:shadow-lg flex items-center gap-2">
+                                        <i class="fas fa-volume-up text-sm"></i>
+                                        <span class="text-xs font-semibold">Suara</span>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="p-6 space-y-5" id="dampaksound2">
+                                <!-- Point a -->
+                                <div class="flex gap-4 items-start bg-white/60 rounded-xl p-4 card-hover">
+                                    <div
+                                        class="flex-shrink-0 w-10 h-10 bg-amber-100 rounded-full flex items-center justify-center">
+                                        <i class="fas fa-person-walking text-amber-600 text-lg"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-bold text-gray-800 text-lg">a. Kemampuan Kognitif Lemah &
+                                            Perkembangan Gerak Terhambat</h4>
+                                        <p class="text-gray-600 text-sm leading-relaxed mt-1">Anak yang mengalami
+                                            stunting berisiko memiliki kemampuan berpikir dan keterampilan gerak yang
+                                            lebih rendah hingga usia sekolah dan dewasa.</p>
+                                    </div>
+                                </div>
+                                <!-- Point b -->
+                                <div class="flex gap-4 items-start bg-white/60 rounded-xl p-4 card-hover">
+                                    <div
+                                        class="flex-shrink-0 w-10 h-10 bg-amber-100 rounded-full flex items-center justify-center">
+                                        <i class="fas fa-heartbeat text-amber-600 text-lg"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-bold text-gray-800 text-lg">b. Meningkatkan Risiko Penyakit
+                                            Sindrom Metabolik</h4>
+                                        <p class="text-gray-600 text-sm leading-relaxed mt-1">Stunting dapat
+                                            meningkatkan risiko terjadinya penyakit pada usia dewasa seperti diabetes,
+                                            tekanan darah tinggi, dan gangguan metabolisme lainnya.</p>
+                                    </div>
+                                </div>
+                                <!-- Point c -->
+                                <div class="flex gap-4 items-start bg-white/60 rounded-xl p-4 card-hover">
+                                    <div
+                                        class="flex-shrink-0 w-10 h-10 bg-amber-100 rounded-full flex items-center justify-center">
+                                        <i class="fas fa-coins text-amber-600 text-lg"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-bold text-gray-800 text-lg">c. Penurunan Pendapatan &
+                                            Produktivitas</h4>
+                                        <p class="text-gray-600 text-sm leading-relaxed mt-1">Dampak gangguan kecerdasan
+                                            dan kesehatan menyebabkan kemampuan kerja saat dewasa menjadi kurang optimal
+                                            sehingga berpengaruh pada rendahnya pendapatan.</p>
+                                    </div>
+                                </div>
+                                <!-- Point d -->
+                                <div class="flex gap-4 items-start bg-white/60 rounded-xl p-4 card-hover">
+                                    <div
+                                        class="flex-shrink-0 w-10 h-10 bg-amber-100 rounded-full flex items-center justify-center">
+                                        <i class="fas fa-hospital-user text-amber-600 text-lg"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-bold text-gray-800 text-lg">d. Meningkatnya Angka Kesakitan</h4>
+                                        <p class="text-gray-600 text-sm leading-relaxed mt-1">Individu yang mengalami
+                                            stunting lebih rentan terhadap berbagai penyakit, baik pada masa anak-anak
+                                            maupun saat dewasa.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="bg-amber-50/50 p-4 text-center border-t border-amber-200">
+                                <i class="fas fa-infinity text-amber-500 mr-1"></i>
+                                <span class="text-xs text-gray-500">Dampak seumur hidup & lintas generasi</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Infografis Dampak Berantai (Unik) -->
+                <div class="mt-8" data-aos="zoom-in-up" data-aos-duration="900">
+                    <div class="bg-white/70 backdrop-blur-sm rounded-2xl p-6 border border-rose-200 shadow-lg">
+                        <div class="flex flex-col md:flex-row items-center justify-between gap-6">
+                            <div class="text-center md:text-left">
+                                <div class="flex items-center gap-2 justify-center md:justify-start">
+                                    <i class="fas fa-link text-rose-500 text-2xl"></i>
+                                    <span class="font-bold text-gray-700 text-lg">Efek Domino Stunting</span>
+                                </div>
+                                <p class="text-gray-500 text-sm max-w-md mt-2">Gangguan gizi kronis → Hambat tumbuh
+                                    kembang → Kerugian ekonomi nasional hingga 2-3% PDB</p>
+                            </div>
+                            <div class="flex flex-wrap gap-4 justify-center">
+                                <div class="bg-rose-100 rounded-full px-4 py-2 text-sm font-medium text-rose-700"><i
+                                        class="fas fa-baby me-1"></i> Balita</div>
+                                <i class="fas fa-arrow-right text-gray-400 hidden md:block"></i>
+                                <div class="bg-orange-100 rounded-full px-4 py-2 text-sm font-medium text-orange-700"><i
+                                        class="fas fa-school"></i> Usia Sekolah</div>
+                                <i class="fas fa-arrow-right text-gray-400 hidden md:block"></i>
+                                <div class="bg-amber-100 rounded-full px-4 py-2 text-sm font-medium text-amber-700"><i
+                                        class="fas fa-briefcase"></i> Dewasa Produktif</div>
+                                <i class="fas fa-arrow-right text-gray-400 hidden md:block"></i>
+                                <div class="bg-red-100 rounded-full px-4 py-2 text-sm font-medium text-red-700"><i
+                                        class="fas fa-chart-line"></i> Kemiskinan</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Call to Action -->
+                <div class="mt-14 text-center" data-aos="fade-up" data-aos-duration="800">
+                    <div
+                        class="bg-gradient-to-r from-rose-600 to-orange-500 rounded-2xl p-6 md:p-8 text-white shadow-xl">
+                        <i class="fas fa-bell text-3xl mb-3"></i>
+                        <h3 class="text-2xl font-bold mb-2">Cegah Sebelum Terlambat!</h3>
+                        <p class="text-rose-100 max-w-lg mx-auto">Dampak stunting bersifat permanen dan sulit diperbaiki
+                            di masa dewasa. Investasi gizi anak sekarang adalah investasi masa depan bangsa.</p>
+                        <div class="mt-5 flex flex-wrap gap-3 justify-center">
+                            <button
+                                class="bg-white text-rose-600 hover:bg-gray-100 px-6 py-2.5 rounded-full font-semibold transition shadow-md flex items-center gap-2">
+                                <i class="fas fa-calendar-check"></i> Konsultasi Gizi
+                            </button>
+                            <button
+                                class="border-2 border-white text-white hover:bg-white/20 px-6 py-2.5 rounded-full font-semibold transition flex items-center gap-2">
+                                <i class="fas fa-share-alt"></i> Bagikan Kesadaran
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- ==================== SECTION PENCEGAHAN STUNTING ABCDE ==================== -->
+        <section class="py-20 px-4 md:px-8 overflow-hidden"  id="pencegahan">
+            <div class="container mx-auto max-w-7xl">
+
+                <!-- Header dengan Ilustrasi Unik -->
+                <div class="text-center mb-16" data-aos="fade-down" data-aos-duration="800">
+                    <div
+                        class="inline-flex items-center gap-3 bg-emerald-100/80 backdrop-blur-sm px-6 py-2 rounded-full shadow-sm mb-4">
+                        <i class="fas fa-shield-heart text-emerald-600 text-xl"></i>
+                        <span class="text-emerald-700 font-semibold tracking-wide text-sm uppercase">Strategi
+                            Nasional</span>
+                    </div>
+                    <h2
+                        class="text-4xl md:text-5xl lg:text-6xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-emerald-700 to-teal-500 mb-4">
+                        Pencegahan Stunting
+                    </h2>
+                    <div class="w-28 h-1.5 bg-gradient-to-r from-emerald-400 to-teal-500 mx-auto rounded-full mb-4">
+                    </div>
+                    <p class="text-gray-600 max-w-2xl mx-auto text-lg font-medium">
+                        Metode <span class="bg-emerald-100 px-2 py-1 rounded-lg font-bold text-emerald-700">ABCDE</span>
+                        · Langkah Konkret Generasi Bebas Stunting
+                    </p>
+                    <!-- Huruf ABCDE yang menarik -->
+                    <div class="flex flex-wrap justify-center gap-3 mt-6">
+                        <span
+                            class="bg-emerald-600 text-white px-5 py-2 rounded-full font-bold text-xl shadow-md">A</span>
+                        <span class="bg-teal-600 text-white px-5 py-2 rounded-full font-bold text-xl shadow-md">B</span>
+                        <span class="bg-cyan-600 text-white px-5 py-2 rounded-full font-bold text-xl shadow-md">C</span>
+                        <span
+                            class="bg-emerald-500 text-white px-5 py-2 rounded-full font-bold text-xl shadow-md">D</span>
+                        <span
+                            class="bg-green-700 text-white px-5 py-2 rounded-full font-bold text-xl shadow-md">E</span>
+                    </div>
+                </div>
+
+                <!-- Grid 5 Card Utama ABCDE -->
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+                    <!-- CARD A - Aktif Tablet Tambah Darah -->
+                    <div class="lg:col-span-1" data-aos="fade-up" data-aos-duration="700" id="pencegahan1">
+                        <div
+                            class="bg-white rounded-2xl shadow-xl overflow-hidden abcde-card h-full border-b-8 border-b-rose-400">
+                            <div
+                                class="relative h-44 bg-gradient-to-br from-rose-400 to-pink-500 flex items-center justify-center">
+                                <div
+                                    class="absolute -top-3 -left-3 w-16 h-16 bg-white rounded-full flex items-center justify-center shadow-lg">
+                                    <span class="text-3xl font-black text-rose-500">A</span>
+                                </div>
+                                <i class="fas fa-tablets text-white text-6xl drop-shadow-lg"></i>
+                            </div>
+                            <div class="p-6">
+                                <h3 class="text-xl font-extrabold text-gray-800 mb-3 flex items-center gap-2">
+                                    <i class="fas fa-check-circle text-rose-500"></i>
+                                    Aktif & Rutin Tablet Tambah Darah
+                                </h3>
+                                <p class="text-gray-600 text-sm leading-relaxed">
+                                    Pencegahan stunting dimulai sejak masa remaja dan kehamilan. Konsumsi <span
+                                        class="font-semibold">Tablet Tambah Darah (TTD)</span> secara rutin: remaja
+                                    putri <span class="bg-rose-100 px-1 rounded">1 tablet/minggu</span>, ibu hamil
+                                    minimal <span class="font-bold">90 tablet selama kehamilan</span>. Mencegah anemia,
+                                    kekurangan gizi kronis (KEK), dan menurunkan risiko BBLR.
+                                </p>
+                                <div class="mt-4 flex items-center gap-2 text-rose-600 text-xs font-semibold">
+                                    <i class="fas fa-heartbeat"></i>
+                                    <span>Cegah anemia sejak dini</span>
+                                </div>
+                                <button onclick="playSound('pencegahan1')"
+                                    class="mt-5 bg-emerald-600 hover:bg-emerald-700 text-white px-3 py-2 rounded-full transition-all duration-300 shadow-md hover:shadow-lg flex items-center gap-2">
+                                    <i class="fas fa-volume-up text-sm"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- CARD B - Bumil Periksa Teratur -->
+                    <div class="lg:col-span-1" data-aos="fade-up" data-aos-duration="700" data-aos-delay="100"
+                        id="pencegahan2">
+                        <div
+                            class="bg-white rounded-2xl shadow-xl overflow-hidden abcde-card h-full border-b-8 border-b-sky-400">
+                            <div
+                                class="relative h-44 bg-gradient-to-br from-sky-400 to-blue-500 flex items-center justify-center">
+                                <div
+                                    class="absolute -top-3 -left-3 w-16 h-16 bg-white rounded-full flex items-center justify-center shadow-lg">
+                                    <span class="text-3xl font-black text-sky-500">B</span>
+                                </div>
+                                <i class="fas fa-stethoscope text-white text-6xl drop-shadow-lg"></i>
+                            </div>
+                            <div class="p-6">
+                                <h3 class="text-xl font-extrabold text-gray-800 mb-3 flex items-center gap-2">
+                                    <i class="fas fa-check-circle text-sky-500"></i>
+                                    Bumil Pemeriksaan Minimal 6 Kali
+                                </h3>
+                                <p class="text-gray-600 text-sm leading-relaxed">
+                                    Pemeriksaan <span class="font-semibold">Antenatal Care (ANC)</span> minimal 6x
+                                    selama kehamilan, termasuk 2x pemeriksaan dokter dengan USG. Memantau pertumbuhan
+                                    janin, mendeteksi komplikasi dini, serta memastikan status kesehatan ibu dan janin
+                                    tetap optimal.
+                                </p>
+                                <div class="mt-4 flex items-center gap-2 text-sky-600 text-xs font-semibold">
+                                    <i class="fas fa-baby-carriage"></i>
+                                    <span>Pantau kesehatan ibu & janin</span>
+                                </div>
+                                <button onclick="playSound('pencegahan2')"
+                                    class="mt-5 bg-emerald-600 hover:bg-emerald-700 text-white px-3 py-2 rounded-full transition-all duration-300 shadow-md hover:shadow-lg flex items-center gap-2">
+                                    <i class="fas fa-volume-up text-sm"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- CARD C - Cukupi Protein Hewani -->
+                    <div class="lg:col-span-1" data-aos="fade-up" data-aos-duration="700" data-aos-delay="200"
+                        id="pencegahan3">
+                        <div
+                            class="bg-white rounded-2xl shadow-xl overflow-hidden abcde-card h-full border-b-8 border-b-amber-500">
+                            <div
+                                class="relative h-44 bg-gradient-to-br from-amber-400 to-orange-500 flex items-center justify-center">
+                                <div
+                                    class="absolute -top-3 -left-3 w-16 h-16 bg-white rounded-full flex items-center justify-center shadow-lg">
+                                    <span class="text-3xl font-black text-amber-500">C</span>
+                                </div>
+                                <i class="fas fa-egg text-white text-6xl drop-shadow-lg"></i>
+                            </div>
+                            <div class="p-6">
+                                <h3 class="text-xl font-extrabold text-gray-800 mb-3 flex items-center gap-2">
+                                    <i class="fas fa-check-circle text-amber-500"></i>
+                                    Cukupi Asupan Protein Hewani
+                                </h3>
+                                <p class="text-gray-600 text-sm leading-relaxed">
+                                    Protein hewani sangat dibutuhkan ibu hamil untuk cegah stunting. Kandungan zat gizi
+                                    lengkap, kaya protein & vitamin penting. Konsumsi <span
+                                        class="font-semibold">daging, ayam, ikan, telur, susu</span> setiap hari untuk
+                                    dukung pertumbuhan janin optimal.
+                                </p>
+                                <div class="mt-4 flex items-center gap-2 text-amber-600 text-xs font-semibold">
+                                    <i class="fas fa-utensils"></i>
+                                    <span>Sumber gizi sempurna untuk si kecil</span>
+                                </div>
+                                <button onclick="playSound('pencegahan3')"
+                                    class="mt-5 bg-emerald-600 hover:bg-emerald-700 text-white px-3 py-2 rounded-full transition-all duration-300 shadow-md hover:shadow-lg flex items-center gap-2">
+                                    <i class="fas fa-volume-up text-sm"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- CARD D - Datang ke Posyandu -->
+                    <div class="lg:col-span-1" data-aos="fade-up" data-aos-duration="700" data-aos-delay="300"
+                        id="pencegahan4">
+                        <div
+                            class="bg-white rounded-2xl shadow-xl overflow-hidden abcde-card h-full border-b-8 border-b-emerald-500">
+                            <div
+                                class="relative h-44 bg-gradient-to-br from-emerald-400 to-green-600 flex items-center justify-center">
+                                <div
+                                    class="absolute -top-3 -left-3 w-16 h-16 bg-white rounded-full flex items-center justify-center shadow-lg">
+                                    <span class="text-3xl font-black text-emerald-500">D</span>
+                                </div>
+                                <i class="fas fa-calendar-check text-white text-6xl drop-shadow-lg"></i>
+                            </div>
+                            <div class="p-6">
+                                <h3 class="text-xl font-extrabold text-gray-800 mb-3 flex items-center gap-2">
+                                    <i class="fas fa-check-circle text-emerald-500"></i>
+                                    Datang ke Posyandu Setiap Bulan
+                                </h3>
+                                <p class="text-gray-600 text-sm leading-relaxed">
+                                    Kunjungan rutin ke <span class="font-semibold">Posyandu setiap bulan</span>
+                                    memungkinkan pemantauan pertumbuhan (penimbangan berat badan & pengukuran
+                                    panjang/tinggi badan balita). Screening dini tumbuh kembang → penanganan cepat
+                                    meminimalisir dampak stunting.
+                                </p>
+                                <div class="mt-4 flex items-center gap-2 text-emerald-600 text-xs font-semibold">
+                                    <i class="fas fa-hand-holding-heart"></i>
+                                    <span>Deteksi dulu, cegah lebih awal</span>
+                                </div>
+                                <button onclick="playSound('pencegahan4')"
+                                    class="mt-5 bg-emerald-600 hover:bg-emerald-700 text-white px-3 py-2 rounded-full transition-all duration-300 shadow-md hover:shadow-lg flex items-center gap-2">
+                                    <i class="fas fa-volume-up text-sm"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- CARD E - ASI Eksklusif (full width special) -->
+
+
+                    <div class="lg:col-span-1" data-aos="fade-up" data-aos-duration="700" data-aos-delay="300"
+                        id="pencegahan5">
+                        <div
+                            class="bg-white rounded-2xl shadow-xl overflow-hidden abcde-card h-full border-b-8 border-b-purple-500">
+                            <div
+                                class="relative h-44 bg-gradient-to-br from-purple-400 to-purple-600 flex items-center justify-center">
+                                <div
+                                    class="absolute -top-3 -left-3 w-16 h-16 bg-white rounded-full flex items-center justify-center shadow-lg">
+                                    <span class="text-3xl font-black text-purple-500">E</span>
+                                </div>
+                                <i class="fas fa-baby  text-white text-6xl drop-shadow-lg"></i>
+                            </div>
+                            <div class="p-6">
+                                <h3 class="text-xl font-extrabold text-gray-800 mb-3 flex items-center gap-2">
+                                    <i class="fas fa-check-circle text-purple-500"></i>
+                                    Eksklusif ASI 6 Bulan & Lanjut Hingga 2 Tahun
+                                </h3>
+                                <p class="text-gray-600 text-sm leading-relaxed">
+                                    Pemberian <span class="font-bold text-purple-700">ASI eksklusif selama 6
+                                        bulan</span> dan dilanjutkan hingga <span class="font-bold">2 tahun</span>
+                                    memegang peranan penting dalam tumbuh kembang bayi. ASI memberikan nutrisi ideal
+                                    (vitamin, protein, lemak) serta antibodi yang membantu melawan virus & bakteri,
+                                    mendukung pertumbuhan optimal anak.
+                                </p>
+                                <div class="mt-4 flex items-center gap-2 text-emerald-600 text-xs font-semibold">
+                                    <div class="rounded-full px-3 py-1 text-xs font-semibold text-purple-700"><i
+                                            class="fas fa-shield-alt"></i> Antibodi alami</div>
+                                </div>
+                                <button onclick="playSound('pencegahan5')"
+                                    class="mt-5 bg-emerald-600 hover:bg-emerald-700 text-white px-3 py-2 rounded-full transition-all duration-300 shadow-md hover:shadow-lg flex items-center gap-2">
+                                    <i class="fas fa-volume-up text-sm"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+
+                </div>
+
+                <!-- Call to Action -->
+                <div class="mt-16 text-center" data-aos="zoom-in" data-aos-duration="800">
+                    <div class="bg-gradient-to-r from-emerald-700 to-teal-600 rounded-2xl p-7 shadow-2xl">
+                        <h3 class="text-2xl md:text-3xl font-bold text-white mb-2">Siap Terapkan ABCDE?</h3>
+                        <p class="text-emerald-100 max-w-lg mx-auto mb-5">Mulai dari diri sendiri, keluarga, dan
+                            lingkungan sekitar. Cegah stunting bersama!</p>
+                        <div class="flex flex-wrap gap-3 justify-center">
+                            <button
+                                class="border-2 border-white text-white hover:bg-white/20 px-7 py-3 rounded-full font-semibold transition flex items-center gap-2">
+                                <i class="fas fa-share-alt"></i> Bagikan ke Keluarga
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+      
+        <!-- ==================== CALL TO ACTION NEWSLETTER ==================== -->
+        <section class="py-16 bg-emerald-800 text-white">
+            <div class="container mx-auto px-6 text-center" data-aos="zoom-in" data-aos-duration="800">
+                <i class="fas fa-envelope-open-text text-4xl mb-4"></i>
+                <h2 class="text-2xl md:text-3xl font-bold">Tetap Terinformasi Seputar Stunting</h2>
+                <p class="mt-2 text-emerald-100 max-w-lg mx-auto">Dapatkan tips, panduan nutrisi, dan info terbaru
+                    program pencegahan stunting.</p>
+                <div class="mt-8 flex flex-col sm:flex-row justify-center gap-3 max-w-md mx-auto">
+                    <input type="email" placeholder="Alamat email anda"
+                        class="px-5 py-3 rounded-full text-gray-800 w-full focus:outline-none focus:ring-2 focus:ring-emerald-300">
+                    <button
+                        class="bg-white text-emerald-800 font-semibold px-6 py-3 rounded-full hover:bg-gray-100 transition shadow-lg">Berlangganan</button>
+                </div>
+                <p class="text-emerald-200 text-xs mt-5">Komitmen bersama untuk generasi tanpa stunting.</p>
+            </div>
+        </section>
+
+        <!-- ==================== FOOTER ==================== -->
+        <footer class="bg-gray-900 text-gray-300 py-10">
+            <div class="container mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-4">
+                <div class="flex items-center gap-2">
+                    <i class="fas fa-seedling text-emerald-400"></i>
+                    <span class="font-semibold text-white">CegahStunting</span>
+                </div>
+                <div class="flex space-x-6 text-sm">
+                    <a href="#" class="hover:text-white transition">Kebijakan Privasi</a>
+                    <a href="#" class="hover:text-white transition">Kontak</a>
+                    <a href="#" class="hover:text-white transition">Kolaborasi</a>
+                </div>
+                <div class="flex space-x-5 text-lg">
+                    <i class="fab fa-instagram hover:text-emerald-400 cursor-pointer transition"></i>
+                    <i class="fab fa-twitter hover:text-emerald-400 cursor-pointer transition"></i>
+                    <i class="fab fa-facebook hover:text-emerald-400 cursor-pointer transition"></i>
+                </div>
+            </div>
+            <div class="text-center text-xs text-gray-500 mt-8">© 2026 Generasi Bebas Stunting | Edukasi untuk Indonesia
+                Sehat</div>
+        </footer>
+    </main>
+
+    <!-- AOS Script Initialization + Mobile Menu Toggle -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        // Initialize AOS with global settings
+        AOS.init({
+            duration: 800,
+            once: true,
+            offset: 100,
+            easing: 'ease-out-quad',
+        });
+
+        // Mobile menu toggle
+        const mobileBtn = document.getElementById('mobileMenuBtn');
+        const mobileMenu = document.getElementById('mobileMenu');
+        if (mobileBtn && mobileMenu) {
+            mobileBtn.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+                // Optional icon change
+                const icon = mobileBtn.querySelector('i');
+                if (mobileMenu.classList.contains('hidden')) {
+                    icon.classList.remove('fa-times');
+                    icon.classList.add('fa-bars');
+                } else {
+                    icon.classList.remove('fa-bars');
+                    icon.classList.add('fa-times');
+                }
+            });
+        }
+
+        // smooth scroll for anchor links (improve native behavior)
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                const href = this.getAttribute('href');
+                if (href === "#" || href === "") return;
+                const target = document.querySelector(href);
+                if (target) {
+                    e.preventDefault();
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                    // Close mobile menu after click on mobile
+                    if (mobileMenu && !mobileMenu.classList.contains('hidden')) {
+                        mobileMenu.classList.add('hidden');
+                        const icon = mobileBtn.querySelector('i');
+                        if (icon) icon.classList.remove('fa-times');
+                        if (icon) icon.classList.add('fa-bars');
+                    }
+                }
+            });
+        });
+
+
+        function playSound(elid) {
+            const el = document.getElementById(elid);
+            const text = el.textContent;
+
+            const sentences = text.split(/(?<=\.)\s+/); // pisah berdasarkan titik
+
+            window.speechSynthesis.cancel();
+
+            let index = 0;
+
+            function speakNext() {
+                if (index < sentences.length) {
+                    const speech = new SpeechSynthesisUtterance(sentences[index]);
+                    speech.lang = "id-ID";
+                    speech.rate = 1;
+                    speech.pitch = 1;
+                    speech.volume = 1;
+
+                    speech.onend = () => {
+                        index++;
+                        speakNext();
+                    };
+
+                    window.speechSynthesis.speak(speech);
+                }
+            }
+
+            speakNext();
+        }
+    </script>
+    <!-- fix for potential missing illustration fallback (inline style) -->
+</body>
+
+</html>

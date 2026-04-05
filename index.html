@@ -12,64 +12,7 @@
     <!-- Font Awesome 6 (free) -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <!-- Custom Tailwind config override for extra smoothness -->
-    <style>
-        * {
-            scroll-behavior: smooth;
-        }
-
-        body {
-            font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-        }
-
-        /* custom scrollbar */
-        ::-webkit-scrollbar {
-            width: 8px;
-        }
-
-        ::-webkit-scrollbar-track {
-            background: #f1f1f1;
-        }
-
-        ::-webkit-scrollbar-thumb {
-            background: #2b9348;
-            border-radius: 20px;
-        }
-
-        /* additional smooth hover transitions */
-        .card-hover {
-            transition: transform 0.2s ease, box-shadow 0.2s ease;
-        }
-
-        .card-hover:hover {
-            transform: translateY(-6px);
-            box-shadow: 0 20px 25px -12px rgba(0, 0, 0, 0.15);
-        }
-
-        .btn-glow:hover {
-            box-shadow: 0 0 12px rgba(43, 147, 72, 0.6);
-        }
-
-        .abcde-card {
-            transition: all 0.3s ease;
-        }
-
-        .abcde-card:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 25px 35px -12px rgba(0, 0, 0, 0.2);
-        }
-
-        .gradient-border {
-            background: linear-gradient(135deg, #2b9348, #38b000, #f4a261);
-        }
-
-        .timeline-badge {
-            transition: all 0.2s ease;
-        }
-
-        .bg-pattern {
-            background-image: radial-gradient(circle at 10% 20%, rgba(46, 204, 113, 0.03) 0%, transparent 50%);
-        }
-    </style>
+     <link rel="stylesheet" href="syle.css">
 </head>
 
 <body class="bg-gradient-to-br from-emerald-50 via-white to-teal-50 text-gray-800">
@@ -91,6 +34,7 @@
                 <a href="#ciriciri" class="hover:text-emerald-600 transition duration-300">Ciri-Ciri</a>
                 <a href="#dampak" class="hover:text-emerald-600 transition duration-300">Dampak</a>
                 <a href="#pencegahan" class="hover:text-emerald-600 transition duration-300">Pencegahan</a>
+                <a href="#peranan" class="hover:text-emerald-600 transition duration-300">Peran</a>
             </nav>
             <div class="md:hidden" data-aos="fade-down">
                 <button id="mobileMenuBtn" class="text-emerald-700 text-2xl focus:outline-none">
@@ -107,6 +51,7 @@
             <a href="#ciriciri" class="hover:text-emerald-600 py-2 transition">Ciri-Ciri</a>
             <a href="#dampak" class="hover:text-emerald-600 py-2 transition">Dampak</a>
             <a href="#pencegahan" class="hover:text-emerald-600 py-2 transition">Pencegahan</a>
+            <a href="#peranan" class="hover:text-emerald-600 py-2 transition">Peran</a>
         </div>
     </header>
 
@@ -125,8 +70,8 @@
                         class="text-4xl md:text-5xl lg:text-6xl font-extrabold leading-tight tracking-tight text-gray-800">
                         Cegah Stunting, <br>
                         <span
-                            class="bg-gradient-to-r from-emerald-600 to-teal-500 bg-clip-text text-transparent text-2xl md:text-3xl lg:text-4xl">Wujudkan
-                            GenerasI Unggul dengan ABCDE</span>
+                            class="bg-gradient-to-r from-emerald-600 to-teal-500 bg-clip-text text-transparent text-2xl md:text-3xl lg:text-4xl">Dari
+                            Masa Kehamilan dengan ABCDE</span>
                     </h1>
 
                     <div class="mt-8 flex flex-wrap gap-4 justify-center lg:justify-start">
@@ -144,8 +89,7 @@
                         <div
                             class="w-72 h-72 md:w-96 md:h-96 bg-gradient-to-tr from-emerald-300 to-teal-300 rounded-full opacity-20 absolute -z-10 blur-2xl">
                         </div>
-                        <img src="https://dinkes.bandaacehkota.go.id/wp-content/uploads/sites/36/2025/07/seri-percepatan-penurunan-stunting-1.png"
-                            alt="Ilustrasi anak sehat" class="w-full max-w-md drop-shadow-xl">
+                        <img src="images/hero.png" alt="Ilustrasi anak sehat" class="w-full max-w-md drop-shadow-xl">
                     </div>
                 </div>
             </div>
@@ -176,43 +120,55 @@
                         </div>
                     </div>
                 </div>
-              <div class="grid grid-cols-2 gap-6" data-aos="fade-up" data-aos-duration="900">
-    <!-- Card 1 - Modern Statistik -->
-    <div class="group relative bg-gradient-to-br from-white to-amber-50/30 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 overflow-hidden border border-amber-100 card-hover">
-        <!-- Background decorative -->
-        <div class="absolute -top-10 -right-10 w-32 h-32 bg-amber-100 rounded-full opacity-40 group-hover:scale-150 transition-transform duration-700"></div>
-        <div class="relative p-6 text-center">
-            <div class="w-14 h-14 bg-gradient-to-br from-amber-400 to-orange-500 rounded-2xl flex items-center justify-center mx-auto mb-4 shadow-lg transform group-hover:scale-110 transition-transform duration-300">
-                <i class="fas fa-chart-line text-white text-2xl"></i>
-            </div>
-            <p class="text-4xl font-black bg-gradient-to-r from-amber-600 to-orange-600 bg-clip-text text-transparent">21,6%</p>
-            <p class="text-sm font-semibold text-gray-700 mt-2">Prevalensi Stunting</p>
-            <p class="text-xs text-gray-400">Indonesia • 2025</p>
-            <div class="mt-3 flex items-center justify-center gap-1">
-                <i class="fas fa-arrow-down text-emerald-500 text-xs"></i>
-                <span class="text-xs text-emerald-600 font-medium">Menurun 2,5% dari 2024</span>
-            </div>
-        </div>
-    </div>
+                <div class="grid grid-cols-2 gap-6" data-aos="fade-up" data-aos-duration="900">
+                    <!-- Card 1 - Modern Statistik -->
+                    <div
+                        class="group relative bg-gradient-to-br from-white to-amber-50/30 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 overflow-hidden border border-amber-100 card-hover">
+                        <!-- Background decorative -->
+                        <div
+                            class="absolute -top-10 -right-10 w-32 h-32 bg-amber-100 rounded-full opacity-40 group-hover:scale-150 transition-transform duration-700">
+                        </div>
+                        <div class="relative p-6 text-center">
+                            <div
+                                class="w-14 h-14 bg-gradient-to-br from-amber-400 to-orange-500 rounded-2xl flex items-center justify-center mx-auto mb-4 shadow-lg transform group-hover:scale-110 transition-transform duration-300">
+                                <i class="fas fa-chart-line text-white text-2xl"></i>
+                            </div>
+                            <p
+                                class="text-4xl font-black bg-gradient-to-r from-amber-600 to-orange-600 bg-clip-text text-transparent">
+                                19,8%</p>
+                            <p class="text-sm font-semibold text-gray-700 mt-2">Prevalensi Stunting</p>
+                            <p class="text-xs text-gray-400">Indonesia • 2024</p>
+                            <div class="mt-3 flex items-center justify-center gap-1">
+                                <i class="fas fa-arrow-down text-emerald-500 text-xs"></i>
+                                <span class="text-xs text-emerald-600 font-medium">Menurun 7,9% dari 2023</span>
+                            </div>
+                        </div>
+                    </div>
 
-    <!-- Card 2 - Modern Periode Emas -->
-    <div class="group relative bg-gradient-to-br from-white to-emerald-50/30 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 overflow-hidden border border-emerald-100 card-hover">
-        <!-- Background decorative -->
-        <div class="absolute -bottom-10 -left-10 w-32 h-32 bg-emerald-100 rounded-full opacity-40 group-hover:scale-150 transition-transform duration-700"></div>
-        <div class="relative p-6 text-center">
-            <div class="w-14 h-14 bg-gradient-to-br from-emerald-400 to-teal-500 rounded-2xl flex items-center justify-center mx-auto mb-4 shadow-lg transform group-hover:scale-110 transition-transform duration-300">
-                <i class="fas fa-crown text-white text-2xl"></i>
-            </div>
-            <p class="text-4xl font-black bg-gradient-to-r from-emerald-600 to-teal-600 bg-clip-text text-transparent">1000 HPK</p>
-            <p class="text-sm font-semibold text-gray-700 mt-2">Periode Emas</p>
-            <p class="text-xs text-gray-400">Hari Pertama Kehidupan</p>
-            <div class="mt-3 flex items-center justify-center gap-1">
-                <i class="fas fa-star text-amber-400 text-xs"></i>
-                <span class="text-xs text-emerald-600 font-medium">Masa krusial cegah stunting</span>
-            </div>
-        </div>
-    </div>
-</div>
+                    <!-- Card 2 - Modern Periode Emas -->
+                    <div
+                        class="group relative bg-gradient-to-br from-white to-emerald-50/30 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 overflow-hidden border border-emerald-100 card-hover">
+                        <!-- Background decorative -->
+                        <div
+                            class="absolute -bottom-10 -left-10 w-32 h-32 bg-emerald-100 rounded-full opacity-40 group-hover:scale-150 transition-transform duration-700">
+                        </div>
+                        <div class="relative p-6 text-center">
+                            <div
+                                class="w-14 h-14 bg-gradient-to-br from-emerald-400 to-teal-500 rounded-2xl flex items-center justify-center mx-auto mb-4 shadow-lg transform group-hover:scale-110 transition-transform duration-300">
+                                <i class="fas fa-crown text-white text-2xl"></i>
+                            </div>
+                            <p
+                                class="text-4xl font-black bg-gradient-to-r from-emerald-600 to-teal-600 bg-clip-text text-transparent">
+                                1000 HPK</p>
+                            <p class="text-sm font-semibold text-gray-700 mt-2">Periode Emas</p>
+                            <p class="text-xs text-gray-400">Hari Pertama Kehidupan</p>
+                            <div class="mt-3 flex items-center justify-center gap-1">
+                                <i class="fas fa-star text-amber-400 text-xs"></i>
+                                <span class="text-xs text-emerald-600 font-medium">Masa krusial cegah stunting</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
             </div>
         </section>
@@ -342,7 +298,7 @@
                     <div class="w-28 h-1.5 bg-gradient-to-r from-emerald-400 to-teal-500 mx-auto rounded-full mb-6">
                     </div>
                     <p class="text-gray-600 max-w-2xl mx-auto text-lg">
-                        Deteksi dulu, cegah sedini mungkin. Kenali 7 tanda utama stunting pada anak agar intervensi
+                        Deteksi dulu, cegah sedini mungkin. Kenali tanda utama stunting pada anak agar intervensi
                         cepat dilakukan.
                     </p>
 
@@ -536,7 +492,7 @@
                     </div>
                 </div>
 
-              
+
             </div>
         </section>
 
@@ -733,7 +689,7 @@
                                     <span class="font-bold text-gray-700 text-lg">Efek Domino Stunting</span>
                                 </div>
                                 <p class="text-gray-500 text-sm max-w-md mt-2">Gangguan gizi kronis → Hambat tumbuh
-                                    kembang → Kerugian ekonomi nasional hingga 2-3% PDB</p>
+                                    kembang → Kerugian ekonomi</p>
                             </div>
                             <div class="flex flex-wrap gap-4 justify-center">
                                 <div class="bg-rose-100 rounded-full px-4 py-2 text-sm font-medium text-rose-700"><i
@@ -762,10 +718,6 @@
                             di masa dewasa. Investasi gizi anak sekarang adalah investasi masa depan bangsa.</p>
                         <div class="mt-5 flex flex-wrap gap-3 justify-center">
                             <button
-                                class="bg-white text-rose-600 hover:bg-gray-100 px-6 py-2.5 rounded-full font-semibold transition shadow-md flex items-center gap-2">
-                                <i class="fas fa-calendar-check"></i> Konsultasi Gizi
-                            </button>
-                            <button
                                 class="border-2 border-white text-white hover:bg-white/20 px-6 py-2.5 rounded-full font-semibold transition flex items-center gap-2">
                                 <i class="fas fa-share-alt"></i> Bagikan Kesadaran
                             </button>
@@ -777,7 +729,7 @@
 
 
         <!-- ==================== SECTION PENCEGAHAN STUNTING ABCDE ==================== -->
-        <section class="py-20 px-4 md:px-8 overflow-hidden"  id="pencegahan">
+        <section class="py-20 px-4 md:px-8 overflow-hidden" id="pencegahan">
             <div class="container mx-auto max-w-7xl">
 
                 <!-- Header dengan Ilustrasi Unik -->
@@ -798,17 +750,80 @@
                         Metode <span class="bg-emerald-100 px-2 py-1 rounded-lg font-bold text-emerald-700">ABCDE</span>
                         · Langkah Konkret Generasi Bebas Stunting
                     </p>
-                    <!-- Huruf ABCDE yang menarik -->
-                    <div class="flex flex-wrap justify-center gap-3 mt-6">
-                        <span
-                            class="bg-emerald-600 text-white px-5 py-2 rounded-full font-bold text-xl shadow-md">A</span>
-                        <span class="bg-teal-600 text-white px-5 py-2 rounded-full font-bold text-xl shadow-md">B</span>
-                        <span class="bg-cyan-600 text-white px-5 py-2 rounded-full font-bold text-xl shadow-md">C</span>
-                        <span
-                            class="bg-emerald-500 text-white px-5 py-2 rounded-full font-bold text-xl shadow-md">D</span>
-                        <span
-                            class="bg-green-700 text-white px-5 py-2 rounded-full font-bold text-xl shadow-md">E</span>
+
+                    <!-- Huruf ABCDE dengan Gambar Besar + Huruf di Bawah -->
+                    <div class="flex flex-wrap justify-center gap-6 md:gap-8 mt-8">
+                        <!-- A - Tablet Tambah Darah -->
+                        <div class="group text-center">
+                            <div
+                                class="w-24 h-24 md:w-28 md:h-28 lg:w-32 lg:h-32  flex items-center justify-center transition-all duration-300 group-hover:scale-110  mx-auto">
+                                <img src="images/a.png" alt="Tablet Tambah Darah"
+                                    class="w-14 h-14 md:w-16 md:h-16 lg:w-20 lg:h-20 object-contain"
+                                    onerror="this.src='https://cdn-icons-png.flaticon.com/512/3063/3063116.png'">
+                            </div>
+                            <div class="mt-0">
+                                <span
+                                    class="bg-emerald-600 text-white font-bold text-xl md:text-2xl px-4 py-1 rounded-full inline-block shadow-md">A</span>
+                            </div>
+                        </div>
+
+                        <!-- B - Pemeriksaan Kehamilan -->
+                        <div class="group text-center">
+                            <div
+                                class="w-24 h-24 md:w-28 md:h-28 lg:w-32 lg:h-32  flex items-center justify-center transition-all duration-300 group-hover:scale-110 mx-auto">
+                                <img src="images/b.png" alt="Pemeriksaan Kehamilan"
+                                    class="w-14 h-14 md:w-16 md:h-16 lg:w-20 lg:h-20 object-contain"
+                                    onerror="this.src='https://cdn-icons-png.flaticon.com/512/3063/3063123.png'">
+                            </div>
+                            <div class="mt-0">
+                                <span
+                                    class="bg-sky-600 text-white font-bold text-xl md:text-2xl px-4 py-1 rounded-full inline-block shadow-md">B</span>
+                            </div>
+                        </div>
+
+                        <!-- C - Protein Hewani -->
+                        <div class="group text-center">
+                            <div
+                                class="w-24 h-24 md:w-28 md:h-28 lg:w-32 lg:h-32  flex items-center justify-center transition-all duration-300 group-hover:scale-110 mx-auto">
+                                <img src="images/c.png" alt="Protein Hewani"
+                                    class="w-14 h-14 md:w-16 md:h-16 lg:w-20 lg:h-20 object-contain"
+                                    onerror="this.src='https://cdn-icons-png.flaticon.com/512/3063/3063125.png'">
+                            </div>
+                            <div class="mt-0">
+                                <span
+                                    class="bg-amber-600 text-white font-bold text-xl md:text-2xl px-4 py-1 rounded-full inline-block shadow-md">C</span>
+                            </div>
+                        </div>
+
+                        <!-- D - Posyandu -->
+                        <div class="group text-center">
+                            <div
+                                class="w-24 h-24 md:w-28 md:h-28 lg:w-32 lg:h-32  flex items-center justify-center transition-all duration-300 group-hover:scale-110 mx-auto">
+                                <img src="images/d.png" alt="Posyandu"
+                                    class="w-14 h-14 md:w-16 md:h-16 lg:w-20 lg:h-20 object-contain"
+                                    onerror="this.src='https://cdn-icons-png.flaticon.com/512/3063/3063127.png'">
+                            </div>
+                            <div class="mt-0">
+                                <span
+                                    class="bg-emerald-600 text-white font-bold text-xl md:text-2xl px-4 py-1 rounded-full inline-block shadow-md">D</span>
+                            </div>
+                        </div>
+
+                        <!-- E - ASI Eksklusif -->
+                        <div class="group text-center">
+                            <div
+                                class="w-24 h-24 md:w-28 md:h-28 lg:w-32 lg:h-32  flex items-center justify-center transition-all duration-300 group-hover:scale-110 mx-auto">
+                                <img src="images/e.png" alt="ASI Eksklusif"
+                                    class="w-14 h-14 md:w-16 md:h-16 lg:w-20 lg:h-20 object-contain"
+                                    onerror="this.src='https://cdn-icons-png.flaticon.com/512/3063/3063129.png'">
+                            </div>
+                            <div class="mt-0">
+                                <span
+                                    class="bg-purple-600 text-white font-bold text-xl md:text-2xl px-4 py-1 rounded-full inline-block shadow-md">E</span>
+                            </div>
+                        </div>
                     </div>
+
                 </div>
 
                 <!-- Grid 5 Card Utama ABCDE -->
@@ -834,8 +849,9 @@
                                 <p class="text-gray-600 text-sm leading-relaxed">
                                     Pencegahan stunting dimulai sejak masa remaja dan kehamilan. Konsumsi <span
                                         class="font-semibold">Tablet Tambah Darah (TTD)</span> secara rutin: remaja
-                                    putri <span class="bg-rose-100 px-1 rounded">1 tablet/minggu</span>, ibu hamil
-                                    minimal <span class="font-bold">90 tablet selama kehamilan</span>. Mencegah anemia,
+                                    putri 1 tablet/minggu, ibu hamil
+                                    minimal <span class="font-bold bg-rose-100 px-1 rounded">90 tablet selama
+                                        kehamilan</span>. Mencegah anemia,
                                     kekurangan gizi kronis (KEK), dan menurunkan risiko BBLR.
                                 </p>
                                 <div class="mt-4 flex items-center gap-2 text-rose-600 text-xs font-semibold">
@@ -1020,14 +1036,235 @@
         </section>
 
 
-      
-        <!-- ==================== CALL TO ACTION NEWSLETTER ==================== -->
-        <section class="py-16 bg-emerald-800 text-white">
-            <div class="container mx-auto px-6 text-center" data-aos="zoom-in" data-aos-duration="800">
+        <!-- ==================== PERAN IBU HAMIL DALAM PENCEGAHAN STUNTING ==================== -->
+        <section class="py-20 bg-gradient-to-br from-pink-50 via-white to-rose-50 overflow-hidden" id="peranan">
+            <div class="container mx-auto px-6 max-w-7xl">
+
+                <!-- Header Section -->
+                <div class="text-center mb-14" data-aos="fade-down" data-aos-duration="800">
+                    <div
+                        class="inline-flex items-center gap-3 bg-pink-100/80 backdrop-blur-sm px-6 py-2 rounded-full shadow-sm mb-4">
+                        <i class="fas fa-female text-pink-600 text-xl"></i>
+                        <span class="text-pink-700 font-semibold tracking-wide text-sm uppercase">Peran Penting</span>
+                    </div>
+                    <h2
+                        class="text-4xl md:text-5xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-pink-600 to-rose-500 mb-4">
+                        Peran Ibu Hamil dalam <br>Pencegahan Stunting
+                    </h2>
+                    <div class="w-28 h-1.5 bg-gradient-to-r from-pink-400 to-rose-500 mx-auto rounded-full mb-6"></div>
+                    <p class="text-gray-600 max-w-3xl mx-auto text-lg">
+                        Masa kehamilan adalah awal dari periode emas <span class="font-bold text-pink-600">1000 Hari
+                            Pertama Kehidupan (HPK)</span>,
+                        fase kritis yang menentukan kualitas tumbuh kembang anak.
+                    </p>
+                </div>
+
+                <!-- Grid Utama: Ilustrasi + Poin Penting -->
+                <div class="grid lg:grid-cols-2 gap-12 items-center">
+
+                    <!-- Kolom Kiri: Ilustrasi Ibu Hamil Sehat -->
+                    <div data-aos="fade-right" data-aos-duration="1000">
+                        <div class="relative">
+                            <!-- Background decorative -->
+                            <div
+                                class="absolute -top-10 -left-10 w-64 h-64 bg-pink-200 rounded-full opacity-30 blur-2xl">
+                            </div>
+                            <div
+                                class="absolute -bottom-10 -right-10 w-64 h-64 bg-rose-200 rounded-full opacity-30 blur-2xl">
+                            </div>
+
+                            <!-- SVG Ilustrasi Ibu Hamil -->
+                            <div
+                                class="relative bg-gradient-to-br from-pink-100 to-rose-100 rounded-3xl p-8 shadow-xl border border-pink-200">
+                                <svg width="100%" height="280" viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg"
+                                    class="mx-auto">
+                                    <!-- Background soft circle -->
+                                    <circle cx="200" cy="140" r="110" fill="#fce7f3" opacity="0.5" />
+                                    <circle cx="200" cy="140" r="85" fill="#fbcfe8" opacity="0.3" />
+
+                                    <!-- Body Ibu Hamil -->
+                                    <path d="M150 100 L150 180 L250 180 L250 100 Z" fill="#fbbf24" stroke="#d97706"
+                                        stroke-width="1.5" />
+                                    <!-- Perut hamil (membesar) -->
+                                    <ellipse cx="200" cy="165" rx="45" ry="35" fill="#fcd34d" stroke="#d97706"
+                                        stroke-width="1.5" />
+                                    <!-- Kepala -->
+                                    <circle cx="200" cy="70" r="28" fill="#fcd34d" stroke="#d97706"
+                                        stroke-width="1.5" />
+                                    <!-- Rambut -->
+                                    <path d="M172 70 Q172 40 200 38 Q228 40 228 70" fill="#78350f" />
+                                    <path d="M172 70 Q168 82 175 92" stroke="#78350f" stroke-width="3" fill="none" />
+                                    <path d="M228 70 Q232 82 225 92" stroke="#78350f" stroke-width="3" fill="none" />
+                                    <!-- Wajah -->
+                                    <circle cx="190" cy="66" r="2.5" fill="#451a03" />
+                                    <circle cx="210" cy="66" r="2.5" fill="#451a03" />
+                                    <path d="M195 76 Q200 82 205 76" stroke="#b45309" stroke-width="2" fill="none" />
+                                    <path d="M188 58 Q193 54 198 58" stroke="#b45309" stroke-width="1.5" fill="none" />
+                                    <!-- Pipi merah -->
+                                    <circle cx="186" cy="73" r="4" fill="#fca5a5" opacity="0.5" />
+                                    <circle cx="214" cy="73" r="4" fill="#fca5a5" opacity="0.5" />
+
+                                    <!-- Bayi di dalam perut (siluet) -->
+                                    <circle cx="200" cy="160" r="18" fill="#fed7aa" opacity="0.7" />
+                                    <circle cx="195" cy="155" r="2" fill="#451a03" opacity="0.5" />
+                                    <circle cx="205" cy="155" r="2" fill="#451a03" opacity="0.5" />
+
+                                    <!-- Tangan memegang perut -->
+                                    <path d="M150 130 Q130 145 140 170" stroke="#d97706" stroke-width="3" fill="none"
+                                        stroke-linecap="round" />
+                                    <path d="M250 130 Q270 145 260 170" stroke="#d97706" stroke-width="3" fill="none"
+                                        stroke-linecap="round" />
+
+                                    <!-- Hati -->
+                                    <path
+                                        d="M280 50 C280 40 290 35 295 45 C300 35 310 40 310 50 C310 65 295 75 295 75 C295 75 280 65 280 50 Z"
+                                        fill="#ec4899" opacity="0.8" />
+
+                                    <!-- Stiker nutrisi -->
+                                    <rect x="55" y="200" width="70" height="25" rx="12" fill="#10b981" opacity="0.8" />
+                                    <text x="90" y="217" text-anchor="middle" font-size="10" fill="white"
+                                        font-weight="bold">🍎 Gizi</text>
+
+                                    <rect x="275" y="200" width="70" height="25" rx="12" fill="#f59e0b" opacity="0.8" />
+                                    <text x="310" y="217" text-anchor="middle" font-size="10" fill="white"
+                                        font-weight="bold">🤰 Sehat</text>
+                                </svg>
+
+                                <div class="text-center mt-4">
+                                    <span
+                                        class="inline-block bg-pink-200 text-pink-700 px-4 py-1 rounded-full text-sm font-semibold">
+                                        <i class="fas fa-heartbeat mr-1"></i> 1000 HPK | Periode Emas
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Kolom Kanan: Poin-poin Peran Ibu Hamil -->
+                    <div data-aos="fade-left" data-aos-duration="1000">
+                        <div
+                            class="bg-gradient-to-br from-pink-50 to-rose-50 rounded-2xl p-6 md:p-8 shadow-xl border border-pink-200 h-full flex flex-col justify-center">
+                            <div class="flex items-center gap-3 mb-4">
+                                <div class="w-10 h-10 bg-pink-200 rounded-full flex items-center justify-center">
+                                    <i class="fas fa-quote-right text-pink-600 text-lg"></i>
+                                </div>
+                                <span class="text-pink-600 font-semibold text-sm uppercase tracking-wide">Mengapa
+                                    Penting?</span>
+                            </div>
+
+                            <p class="text-gray-700 leading-relaxed text-base md:text-lg" id="peranIbuText">
+                                Ibu hamil memiliki peran penting dalam pencegahan stunting karena masa kehamilan
+                                merupakan awal dari periode
+                                <span class="font-bold text-pink-600">1000 Hari Pertama Kehidupan (HPK)</span>, yaitu
+                                fase kritis yang menentukan
+                                kualitas pertumbuhan dan perkembangan anak. Stunting dipengaruhi oleh status gizi ibu
+                                selama kehamilan, riwayat kesehatan,
+                                serta faktor lingkungan dan sosial ekonomi. Peran ini mencakup pemenuhan gizi selama
+                                kehamilan, pemberian
+                                <span class="font-bold text-pink-600">ASI eksklusif</span>, pemberian Makanan Pendamping
+                                ASI (MP-ASI) yang bergizi seimbang,
+                                serta pemantauan pertumbuhan dan perkembangan anak secara rutin.
+                            </p>
+
+                            <!-- Tombol Play Sound -->
+                            <div class="mt-6 flex items-center gap-3">
+                                <button onclick="playSound('peranIbuText')"
+                                    class="bg-pink-500 hover:bg-pink-600 text-white px-4 py-2 rounded-full flex items-center gap-2 transition shadow-md">
+                                    <i class="fas fa-volume-up text-sm"></i>
+                                    <span class="text-xs font-semibold">Dengarkan</span>
+                                </button>
+                                <span class="text-xs text-gray-400 italic">🎧 Klik untuk mendengar penjelasan</span>
+                            </div>
+
+                            <!-- Highlight Ikon Pendukung -->
+                            <div class="grid grid-cols-4 gap-3 mt-6 pt-4 border-t border-pink-200">
+                                <div class="text-center">
+                                    <i class="fas fa-apple-alt text-pink-500 text-xl"></i>
+                                    <p class="text-[10px] text-gray-500 mt-1">Gizi Seimbang</p>
+                                </div>
+                                <div class="text-center">
+                                    <i class="fas fa-baby text-pink-500 text-xl"></i>
+                                    <p class="text-[10px] text-gray-500 mt-1">ASI Eksklusif</p>
+                                </div>
+                                <div class="text-center">
+                                    <i class="fas fa-utensils text-pink-500 text-xl"></i>
+                                    <p class="text-[10px] text-gray-500 mt-1">MPASI Bergizi</p>
+                                </div>
+                                <div class="text-center">
+                                    <i class="fas fa-stethoscope text-pink-500 text-xl"></i>
+                                    <p class="text-[10px] text-gray-500 mt-1">Pemantauan Rutin</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Statistik Pendukung -->
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-16" data-aos="zoom-in-up" data-aos-duration="800">
+                    <div class="text-center bg-white/60 backdrop-blur-sm rounded-xl p-4 shadow-sm">
+                        <i class="fas fa-chart-line text-3xl text-pink-500 mb-2"></i>
+                        <p class="text-2xl font-bold text-gray-800">60%</p>
+                        <p class="text-xs text-gray-500">Kekurangan gizi ibu hamil berkontribusi pada risiko stunting
+                        </p>
+                    </div>
+                    <div class="text-center bg-white/60 backdrop-blur-sm rounded-xl p-4 shadow-sm">
+                        <i class="fas fa-calendar-week text-3xl text-emerald-500 mb-2"></i>
+                        <p class="text-2xl font-bold text-gray-800">1000 HPK</p>
+                        <p class="text-xs text-gray-500">Periode kritis yang tidak bisa diulang</p>
+                    </div>
+                    <div class="text-center bg-white/60 backdrop-blur-sm rounded-xl p-4 shadow-sm">
+                        <i class="fas fa-hand-holding-heart text-3xl text-amber-500 mb-2"></i>
+                        <p class="text-2xl font-bold text-gray-800">6x</p>
+                        <p class="text-xs text-gray-500">Minimal pemeriksaan kehamilan (ANC)</p>
+                    </div>
+                </div>
+
+
+            </div>
+        </section>
+
+
+        <!-- ==================== CALL TO ACTION NEWSLETTER + HiStats COUNTER ==================== -->
+        <section class="py-16 bg-emerald-800 text-white relative overflow-hidden">
+            <!-- Background decorative -->
+            <div class="absolute inset-0 opacity-10">
+                <div class="absolute top-0 left-0 w-72 h-72 bg-white rounded-full -translate-x-1/2 -translate-y-1/2">
+                </div>
+                <div class="absolute bottom-0 right-0 w-96 h-96 bg-white rounded-full translate-x-1/3 translate-y-1/3">
+                </div>
+            </div>
+
+            <div class="container mx-auto px-6 text-center relative z-10">
                 <i class="fas fa-envelope-open-text text-4xl mb-4"></i>
                 <h2 class="text-2xl md:text-3xl font-bold">Tetap Terinformasi Seputar Stunting</h2>
                 <p class="mt-2 text-emerald-100 max-w-lg mx-auto">Dapatkan tips, panduan nutrisi, dan info terbaru
                     program pencegahan stunting.</p>
+
+                <!-- HiStats Counter Global - Modern Style -->
+                <div class="mt-6 flex justify-center">
+                    <div
+                        class="bg-white/10 backdrop-blur-sm rounded-2xl px-6 py-3 inline-flex items-center gap-4 border border-white/20 shadow-lg">
+                        <div class="flex items-center gap-2">
+                            <i class="fas fa-chart-line text-emerald-300 text-xl"></i>
+                            <span class="text-emerald-100 text-sm font-medium">Total Pengunjung:</span>
+                        </div>
+                        <div class="flex items-baseline gap-1">
+                            <!-- HiStats Counter Code -->
+
+                            <noscript>
+                                <a href="/" target="_blank">
+                                    <img src="//sstatic1.histats.com/0.gif?7332223&101" alt="web counter" border="0">
+                                </a>
+                            </noscript>
+                            <!-- End HiStats Counter -->
+                        </div>
+                        <div class="w-px h-6 bg-white/20 mx-1"></div>0
+                        <div class="flex items-center gap-1">
+                            <i class="fas fa-users text-emerald-300 text-sm"></i>
+                            <span class="text-emerald-100 text-xs">Online: <span id="histats_online">0</span></span>
+                        </div>
+                    </div>
+                </div>
                 <div class="mt-8 flex flex-col sm:flex-row justify-center gap-3 max-w-md mx-auto">
                     <input type="email" placeholder="Alamat email anda"
                         class="px-5 py-3 rounded-full text-gray-800 w-full focus:outline-none focus:ring-2 focus:ring-emerald-300">
@@ -1037,6 +1274,7 @@
                 <p class="text-emerald-200 text-xs mt-5">Komitmen bersama untuk generasi tanpa stunting.</p>
             </div>
         </section>
+
 
         <!-- ==================== FOOTER ==================== -->
         <footer class="bg-gray-900 text-gray-300 py-10">
@@ -1064,87 +1302,11 @@
     <!-- AOS Script Initialization + Mobile Menu Toggle -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
-        // Initialize AOS with global settings
-        AOS.init({
-            duration: 800,
-            once: true,
-            offset: 100,
-            easing: 'ease-out-quad',
-        });
-
-        // Mobile menu toggle
-        const mobileBtn = document.getElementById('mobileMenuBtn');
-        const mobileMenu = document.getElementById('mobileMenu');
-        if (mobileBtn && mobileMenu) {
-            mobileBtn.addEventListener('click', () => {
-                mobileMenu.classList.toggle('hidden');
-                // Optional icon change
-                const icon = mobileBtn.querySelector('i');
-                if (mobileMenu.classList.contains('hidden')) {
-                    icon.classList.remove('fa-times');
-                    icon.classList.add('fa-bars');
-                } else {
-                    icon.classList.remove('fa-bars');
-                    icon.classList.add('fa-times');
-                }
-            });
-        }
-
-        // smooth scroll for anchor links (improve native behavior)
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                const href = this.getAttribute('href');
-                if (href === "#" || href === "") return;
-                const target = document.querySelector(href);
-                if (target) {
-                    e.preventDefault();
-                    target.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
-                    });
-                    // Close mobile menu after click on mobile
-                    if (mobileMenu && !mobileMenu.classList.contains('hidden')) {
-                        mobileMenu.classList.add('hidden');
-                        const icon = mobileBtn.querySelector('i');
-                        if (icon) icon.classList.remove('fa-times');
-                        if (icon) icon.classList.add('fa-bars');
-                    }
-                }
-            });
-        });
-
-
-        function playSound(elid) {
-            const el = document.getElementById(elid);
-            const text = el.textContent;
-
-            const sentences = text.split(/(?<=\.)\s+/); // pisah berdasarkan titik
-
-            window.speechSynthesis.cancel();
-
-            let index = 0;
-
-            function speakNext() {
-                if (index < sentences.length) {
-                    const speech = new SpeechSynthesisUtterance(sentences[index]);
-                    speech.lang = "id-ID";
-                    speech.rate = 1;
-                    speech.pitch = 1;
-                    speech.volume = 1;
-
-                    speech.onend = () => {
-                        index++;
-                        speakNext();
-                    };
-
-                    window.speechSynthesis.speak(speech);
-                }
-            }
-
-            speakNext();
-        }
+       
     </script>
     <!-- fix for potential missing illustration fallback (inline style) -->
+
+    <script src="scrip.js" defer></script>
 </body>
 
 </html>

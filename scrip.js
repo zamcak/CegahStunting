@@ -81,22 +81,13 @@
 
 
  var _Hasync = _Hasync || [];
- _Hasync.push(['Histats.start', '1,7332223,4,0,0,0,00010000']);
+ _Hasync.push(['Histats.start', '1,5018645,4,203,118,65,00010000']);
  _Hasync.push(['Histats.fasi', '1']);
  _Hasync.push(['Histats.track_hits', '']);
  (function () {
      var hs = document.createElement('script');
      hs.type = 'text/javascript';
      hs.async = true;
-     hs.src = ('//s10.histats.com/js15_as.js');
+     hs.src = ('https://s10.histats.com/js15_as.js');
      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(hs);
  })();
- setTimeout(function () {
-     // Mencari elemen yang berisi angka counter dari HiStats
-     const histatsElements = document.querySelectorAll('.histats_counter, [id*="histats"]');
-     if (histatsElements.length > 0) {
-         histatsElements.forEach(el => {
-             el.classList.add('text-2xl', 'font-bold', 'text-white');
-         });
-     }
- }, 1000);
